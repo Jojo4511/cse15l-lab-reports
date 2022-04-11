@@ -112,9 +112,14 @@ Congratulations, now you no longer have to type your password everytime you want
 
 ## Optimizing Remote Running
 
-to run a command on the server right upon connection, you can qoutes after the ssh command, for example ssh cs15lsp22zz@ieng6.ucsd.edu "pwd" connects to the server, then prints the servers working directory right upon connection.
+to run a command on the server right upon connection, you can qoutes after the ssh command, for example `ssh cs15lsp22zz@ieng6.ucsd.edu "pwd"` connects to the server, then prints the servers working directory right upon connection.
 
+to run multiple commands on the same line use semicolons between each command. For example: `javac WhereAmI.java; java WhereAmI`
 
+using both of these tips, we can make a local copy of a file, move the file to the server, connect to the server, and then compile and run the file all in one line: 
+`cp WhereAmI.java OtherMain.java; scp OtherMain.java cs15lsp22zz@ieng6.ucsd.edu:~/; ssh cs15lsp22zz@ieng6.ucsd.edu "javac OtherMain.java;java WhereAmI"`
+
+![image](https://user-images.githubusercontent.com/97646229/162678921-a31f7560-16c9-49cc-99cc-cbf882a1475c.png)
 
 bonus tip: use the up arrow to autofill your most recently runned command
 
