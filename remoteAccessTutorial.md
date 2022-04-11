@@ -94,6 +94,30 @@ as you can see the file has succesfully been moved to the server. If you compile
 
 ## Setting an SSH key
 
+Next we will set an SSH key so we do not have to retype a password everytime we use ssh or scp.
+
+run the command `ssh-keygen`
+when prompted with wich file to save the key in, type: `/Users/<user-name>/.ssh/id_rsa`
+
+do not set a passphrase, when prompted with setting a passphrase, both times just leave it empty and press enter.
+
+Next connect to the server and make a new directory called .ssh by typing `mkdir .ssh`
+
+now use the scp command to move your `id_rsa.pub` file to the .ssh directory on the server
+
+Congratulations, now you no longer have to type your password everytime you want to use an ssh or scp command.
+	
+![image](https://user-images.githubusercontent.com/97646229/162673603-c7d51ab9-96a7-4888-baf6-6d1f27341b70.png)
+
+
+## Optimizing Remote Running
+
+to run a command on the server right upon connection, you can qoutes after the ssh command, for example ssh cs15lsp22zz@ieng6.ucsd.edu "pwd" connects to the server, then prints the servers working directory right upon connection.
+
+
+
+bonus tip: use the up arrow to autofill your most recently runned command
+
 
 
 
